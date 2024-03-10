@@ -39,4 +39,3 @@ branch = "main"
 commit_message = "CHANGES:\n"
 changelog_file = "CHANGELOG.md"
 upload_to_pypi = "false"
-upload_to_release = false  # 不创建GitHub的发布
