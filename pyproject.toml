@@ -1,0 +1,42 @@
+[project]
+name = "Mortal-backend"
+version = "0.1.0"
+description = "像凡人修仙一样不断升级的平台-后端"
+authors = [
+    { name = "luyh", email = "jaylu1995@outlook.com" },
+]
+dependencies = [
+    "django>=5.0.3",
+    "djangorestframework>=3.14.0",
+    "djangorestframework-simplejwt>=5.3.1",
+    "django-comment-migrate>=0.1.7",
+    "drf-yasg>=1.21.7",
+    "mysqlclient>=2.2.4",
+    "setuptools>=69.1.1",
+    "coreapi>=2.3.3",
+    "pre-commit>=3.6.2",
+    "ruff>=0.3.2",
+    "python-semantic-release>=9.1.1",
+]
+requires-python = ">=3.12"
+readme = "README.md"
+license = { text = "AGPL-3.0" }
+
+[build-system]
+requires = ["pdm-backend"]
+build-backend = "pdm.backend"
+
+
+[tool.pdm]
+distribution = true
+
+[tool.ruff]
+line-length = 120
+
+[tool.semantic_release]
+version_variable = "pyproject.toml:project.version"
+branch = "main"
+commit_message = "CHANGES:\n"
+changelog_file = "CHANGELOG.md"
+upload_to_pypi = "false"
+upload_to_release = false  # 不创建GitHub的发布
