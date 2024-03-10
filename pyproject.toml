@@ -16,7 +16,6 @@ dependencies = [
     "coreapi>=2.3.3",
     "pre-commit>=3.6.2",
     "ruff>=0.3.2",
-    "python-semantic-release>=9.1.1",
 ]
 requires-python = ">=3.12"
 readme = "README.md"
@@ -32,10 +31,3 @@ distribution = true
 
 [tool.ruff]
 line-length = 120
-
-[tool.semantic_release]
-version_variable = "pyproject.toml:project.version"
-branch = "main"
-commit_message = "CHANGES:\n"
-changelog_file = "CHANGELOG.md"
-upload_to_pypi = "false"
