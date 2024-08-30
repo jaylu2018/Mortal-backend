@@ -10,9 +10,12 @@ from system.users.models import User
 
 # 自定义登录序列化器，继承自TokenObtainPairSerializer
 class MyTokenObtainPairSerializer(TokenObtainPairSerializer):
+    username = serializers.CharField(max_length=150, required=True, label=_("确认密码"), help_text=_("确认密码"))
+
     def validate(self, attrs):
         data = super().validate(attrs)
         data["token"] = data.pop("access")
+        data["username"] = attrs.get("username")
         return data
 
 

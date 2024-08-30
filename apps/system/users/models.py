@@ -11,7 +11,7 @@ class User(AbstractUser):
     """
 
     name = models.CharField(
-        max_length=30, null=True, blank=True, verbose_name=_("姓名")
+        max_length=30, null=True, blank=True, verbose_name=_("昵称")
     )  # 用户可能不希望他们的用户名被公开，因此将用户的姓名和用户名分开
     gender = models.CharField(max_length=1, choices=(("1", "男"), ("2", "女")), default="1", verbose_name=_("性别"))
     mobile = models.CharField(max_length=11, verbose_name=_("电话"))
