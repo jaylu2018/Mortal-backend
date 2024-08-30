@@ -22,4 +22,6 @@ urlpatterns = [
     path("", include(router.urls)),
     # 用户详情
     path("users/details", views.UserDetailView.as_view(), name="user-detail"),
+    # get-async-routes
+    path("routes", views.AsyncRoutesView.as_view(), name="async-routes"),
 ]
